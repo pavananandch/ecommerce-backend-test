@@ -2,8 +2,7 @@ const cors = require("cors");
 const express = require("express");
 const app = express();
 const { MongoClient, ObjectId } = require("mongodb");
-const URI =
-    "mongodb+srv://saipavananand08:test123@cluster0.sa0hhhv.mongodb.net/";
+const URI = process.env.uri;
 const client = new MongoClient(URI);
 const port = process.env.port;
 async function connectToDB() {
